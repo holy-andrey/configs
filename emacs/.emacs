@@ -12,6 +12,8 @@
  ;; If there is more than one, they won't work right.
  )
 
+(setq-default truncate-lines t)
+
 (require 'package)
 (add-to-list 'package-archives 
 	     '("marmalade" .
@@ -26,7 +28,9 @@
 (set-face-attribute 'default nil :font "Anonymous Pro" :height 110)
 
 (add-hook 'lisp-mode-hook #'paredit-mode)
+
 (add-hook 'emacs-lisp-mode-hook #'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook #'turn-on-eldoc-mode)
 
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (add-to-list 'load-path "~/slime/")
@@ -34,3 +38,6 @@
 (slime-setup)
 
 (add-hook 'lisp-mode-hook #'pretty-lambda-mode)
+
+(setq-default indent-tabs-mode nil)
+(setq-default ruby-indent-level 4)
