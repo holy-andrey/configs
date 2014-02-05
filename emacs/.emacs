@@ -39,5 +39,5 @@
 
 (add-hook 'lisp-mode-hook #'pretty-lambda-mode)
 
-(setq-default indent-tabs-mode nil)
-(setq-default ruby-indent-level 4)
+;; (setq-default indent-tabs-mode nil)
+;; (setq-default ruby-indent-level 4)
